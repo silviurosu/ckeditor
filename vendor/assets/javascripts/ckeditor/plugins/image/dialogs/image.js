@@ -581,11 +581,26 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 											label : editor.lang.common.browseServer,
 											hidden : true,
 											filebrowser : 'info:txtUrl'
-										},
+										}
+									]
+								}
+							]
+						},
+						{
+							type : 'vbox',
+							padding : 0,
+							children :
+							[
+								{
+									type : 'hbox',
+									widths : [ '280px', '110px' ],
+									align : 'right',
+									children :
+									[
 										{
 											id : 'txtTitle',
 											type : 'text',
-											label : editor.lang.link.advisoryTitle,
+											label : editor.lang.link.title,
 											'default' : '',
 											setup : function( type, element )
 											{
@@ -631,7 +646,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 									]
 								}
 							]
-						},
+						},						
 						{
 							id : 'txtAlt',
 							type : 'text',
@@ -664,6 +679,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 								}
 							}
 						},
+						
 						{
 							type : 'hbox',
 							children :
