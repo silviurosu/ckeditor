@@ -1168,7 +1168,53 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 										element.setAttribute( 'target', this.getValue() );
 								}
 							}
-						}
+						},
+						{
+							id : 'txtTitle',
+							type : 'text',
+							label : editor.lang.link.advisoryTitle,
+							'default' : '',
+							setup : function( type, element )
+							{
+								if ( type == LINK )
+								{
+									this.setValue( element.getAttribute( 'title' ) );
+								}
+							},
+							commit : function( type, element )
+							{
+								if ( type == LINK )
+								{
+									if ( this.getValue() || this.isChanged() )
+									{
+										element.setAttribute( 'title', this.getValue() );
+									}
+								}
+							}
+						},
+						{
+							id : 'txtRel',
+							type : 'text',
+							label : editor.lang.link.rel,
+							'default' : '',
+							setup : function( type, element )
+							{
+								if ( type == LINK )
+								{
+									this.setValue( element.getAttribute( 'rel' ) );
+								}
+							},
+							commit : function( type, element )
+							{
+								if ( type == LINK )
+								{
+									if ( this.getValue() || this.isChanged() )
+									{
+										element.setAttribute( 'rel', this.getValue() );
+									}
+								}
+							}
+						},
 					]
 				},
 				{
