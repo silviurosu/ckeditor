@@ -602,7 +602,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						{
 							id : 'txtTitle',
 							type : 'text',
-							label : editor.lang.link.imageTitle,
+							label : editor.lang.link.imagetitle,
 							'default' : '',
 							setup : function( type, element )
 							{
@@ -660,7 +660,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						]
 					}
 					]
-				},						
+				},
 				{
 					id : 'txtAlt',
 					type : 'text',
@@ -693,7 +693,6 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						}
 					}
 				},
-
 				{
 					type : 'hbox',
 					children :
@@ -1055,7 +1054,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 																}
 
 																if ( !internalCommit && type == IMAGE )
-																element.removeAttribute( 'alt' );
+																element.removeAttribute( 'vspace' );
 															}
 															else if ( type == CLEANUP )
 															{
@@ -1169,7 +1168,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 										},
 										{
 											id : 'Link',
-											label : editor.lang.link.imageTitle,
+											label : editor.lang.link.title,
 											padding : 0,
 											elements :
 											[
@@ -1243,64 +1242,6 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 														if ( this.getValue() || this.isChanged() )
 														element.setAttribute( 'target', this.getValue() );
 													}
-												}
-											},
-											{
-												id : 'txtTitle',
-												type : 'text',
-												label : editor.lang.link.imageTitle,
-												'default' : '',
-												setup : function( type, element )
-												{
-													if ( type == IMAGE )
-													{
-														this.setValue( element.getAttribute( 'title' ) );
-													}
-												},
-												commit : function( type, element )
-												{
-													if ( type == IMAGE )
-													{
-														if ( this.getValue() || this.isChanged() )
-														element.setAttribute( 'title', this.getValue() );
-													}
-													else if ( type == PREVIEW )
-													{
-														element.setAttribute( 'title', this.getValue() );
-													}
-													else if ( type == CLEANUP )
-													{
-														element.removeAttribute( 'title' );
-													}
-												}
-											},
-											{
-												id : 'txtRel',
-												type : 'text',
-												label : editor.lang.link.rel,
-												'default' : '',
-												setup : function( type, element )
-												{
-													if ( type == IMAGE )
-													{
-														this.setValue( element.getAttribute( 'rel' ) );
-													}
-												},
-												commit : function( type, element )
-												{
-													if ( type == IMAGE )
-													{
-														if ( this.getValue() || this.isChanged() )
-														element.setAttribute( 'rel', this.getValue() );
-													}
-													else if ( type == PREVIEW )
-													{
-														element.setAttribute( 'rel', this.getValue() );
-													}
-													else if ( type == CLEANUP )
-													{
-														element.removeAttribute( 'rel' );
-													}			
 												}
 											}
 											]
