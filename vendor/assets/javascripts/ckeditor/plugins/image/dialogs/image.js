@@ -602,7 +602,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						{
 							id : 'txtTitle',
 							type : 'text',
-							label : editor.lang.link.imagetitle,
+							label : editor.lang.imagetitle,
 							'default' : '',
 							setup : function( type, element )
 							{
@@ -631,7 +631,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						{
 							id : 'txtRel',
 							type : 'text',
-							label : editor.lang.link.rel,
+							label : editor.lang.rel,
 							'default' : '',
 							setup : function( type, element )
 							{
