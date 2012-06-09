@@ -602,18 +602,18 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 										{
 											id : 'txtTitle',
 											type : 'text',
-											label : editor.lang.link.title,
+											label : editor.lang.link.imageTitle,
 											'default' : '',
 											setup : function( type, element )
 											{
-												if ( type == LINK )
+												if ( type == IMAGE )
 												{
 													this.setValue( element.getAttribute( 'title' ) );
 												}
 											},
 											commit : function( type, element )
 											{
-												if ( type == LINK )
+												if ( type == IMAGE )
 												{
 													if ( this.getValue() || this.isChanged() )
 													{
@@ -629,14 +629,14 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 											'default' : '',
 											setup : function( type, element )
 											{
-												if ( type == LINK )
+												if ( type == IMAGE )
 												{
 													this.setValue( element.getAttribute( 'rel' ) );
 												}
 											},
 											commit : function( type, element )
 											{
-												if ( type == LINK )
+												if ( type == IMAGE )
 												{
 													if ( this.getValue() || this.isChanged() )
 													{
@@ -1236,11 +1236,11 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 						{
 							id : 'txtTitle',
 							type : 'text',
-							label : editor.lang.link.advisoryTitle,
+							label : editor.lang.link.imageTitle,
 							'default' : '',
 							setup : function( type, element )
 							{
-								if ( type == LINK )
+								if ( type == IMAGE )
 								{
 									this.setValue( element.getAttribute( 'title' ) );
 								}
@@ -1263,7 +1263,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 							'default' : '',
 							setup : function( type, element )
 							{
-								if ( type == LINK )
+								if ( type == IMAGE )
 								{
 									this.setValue( element.getAttribute( 'rel' ) );
 								}
