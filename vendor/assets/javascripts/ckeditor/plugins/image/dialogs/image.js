@@ -302,6 +302,8 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 				// Copy of the image
 				this.originalElement = editor.document.createElement( 'img' );
 				this.originalElement.setAttribute( 'alt', '' );
+				this.originalElement.setAttribute( 'title', '' );
+				this.originalElement.setAttribute( 'rel', '' );
 				this.originalElement.setCustomData( 'isReady', 'false' );
 
 				if ( link )
@@ -1041,7 +1043,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 															}
 
 															if ( !internalCommit && type == IMAGE )
-																element.removeAttribute( 'vspace' );
+																element.removeAttribute( 'alt' );
 														}
 														else if ( type == CLEANUP )
 														{
@@ -1155,7 +1157,7 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 				},
 				{
 					id : 'Link',
-					label : editor.lang.link.title,
+					label : editor.lang.link.imageTitle,
 					padding : 0,
 					elements :
 					[
